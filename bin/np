@@ -1,0 +1,62 @@
+#!/bin/bash
+
+github_username=afriguez
+absolute_path=/home/fer/Code/projects
+
+h="Usage:\n"
+h="$h   np [options]\n   Where options are:\n"
+h="$h   -p [Project main directory]\n   -f [Main file]\n   -g [Enables git]\n"
+h="$h   -c [\"command --options\"] Example: np -c \"npm init --yes\"\n"
+h="$h      command after -c needs to be quoted.\n      if there's no specified -p the command will be executed in the current one"
+
+if [ ! $1 ]; then
+    echo -e "$h"
+    exit 0
+fi
+
+mk_project_dir () {
+    if [ $1:-1 != "/" ]; then
+	path=$1/
+    fi
+
+    cd $1 && mkdir $2 && cd $2 &&
+    echo Created directory $2 in $1
+}
+
+mk_index_file () {
+    if [ "$1" ]; then
+	touch $1
+    fi
+}
+
+init_git_repo () {
+    if [ $1 ]; then
+	git init
+	git remote add origin https://github.com/$2/$3.git &&
+		echo Origin set to https://github.com/$2/$3.git
+    fi
+}
+
+while getopts p:f:c:g opt; do
+    case ${opt} in
+	\?) echo -e "$h" && exit
+	;;
+	p) project=$OPTARG
+	;;
+	f) index_file=$OPTARG
+	;;
+	c) cmd="$OPTARG"
+	;;
+	g) use_git=1
+	;;	
+    esac
+done
+shift $((OPTIND -1)) # shift all args that have been processed
+
+mk_project_dir "$absolute_path" "$project"
+mk_index_file "$index_file"
+init_git_repo "$use_git" "$github_username" "$project"
+
+if [ "$cmd" ]; then
+    $cmd
+fi
