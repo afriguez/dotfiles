@@ -1,0 +1,8 @@
+{
+	"rpc.workspaceElapsedTime": true,
+	"rpc.detailsEditing": "{workspace}:{filename} {problems}",
+	"rpc.detailsViewing": "In {workspace}:{filename} Lns:{totallines}",
+	"rpc.lowerDetailsEditing": "Por que andas leyendo esto?",
+  "rpc.lowerDetailsViewing": "necesidad de leer esto?.",
+  "clangd.path": "/home/fer/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
+}

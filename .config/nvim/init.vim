@@ -2,8 +2,7 @@ set nobackup
 set noswapfile
 set relativenumber
 set number
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=4 softtabstop=4 shiftwidth=4
 
 call plug#begin()
 
@@ -16,7 +15,9 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -46,7 +47,17 @@ nmap <leader>gs :G<CR>
 
 nnoremap <leader>gc :GCheckout<CR>
 
-"" nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
+nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
+"" nnoremap gp :!npx prettier --write %:p<CR>
 
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
+
+"" set filetypes as typescriptreact
+au BufRead,BufNewFile *jsx,*.tsx set filetype=typescriptreact
+
+hi tsxTagName ctermfg=51
+hi tsxComponentName ctermfg=155
+hi tsxCloseComponentName ctermfg=155
+hi tsxCloseTag ctermfg=51
+hi tsxCloseTagName ctermfg=51

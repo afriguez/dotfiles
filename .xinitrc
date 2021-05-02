@@ -48,27 +48,21 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# Compositor
+# monitors
+xrandr --output eDP-1 --primary --mode 1366x768 --pos 1920x0 --output HDMI-2 --mode 1920x1080 --pos 0x0
+
+# compositor
 picom &
 
-# Monitors
-xrandr --output eDP1 --primary --mode 1366x768 --pos 1920x0 --output HDMI2 --mode 1920x1080 --pos 0x0
+# wallpaper
+feh --bg-scale --no-fehbg --randomize ~/Downloads/Wallpaper/*
 
-# Bg img
-feh --bg-scale --no-fehbg /home/fer/Downloads/Wallpaper/Pandemonica-Wallpaper.jpg
-
-# Brightness
-xrandr --output eDP1 --brightness 0.6
+# brightness
+xrandr --output eDP-1 --brightness 0.6
 
 while true; do
-    xsetroot -name "$(date '+%b %d (%a) %I:%M%p')"
-    sleep 30s
+	xsetroot -name "$(date '+%b %d (%a) %H:%M%P')"
+	sleep 30s
 done &
 
-# Loop
-while true; do
-    dwm >/dev/null 2>&1
-done
-
-# start dwm
 exec dwm
