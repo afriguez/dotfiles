@@ -1,8 +1,8 @@
 {
-	"rpc.workspaceElapsedTime": true,
-	"rpc.detailsEditing": "{workspace}:{filename} {problems}",
-	"rpc.detailsViewing": "In {workspace}:{filename} Lns:{totallines}",
-	"rpc.lowerDetailsEditing": "Por que andas leyendo esto?",
-  "rpc.lowerDetailsViewing": "necesidad de leer esto?.",
+  "rpc.workspaceElapsedTime": true,
+  "rpc.detailsEditing": "{workspace_folder}:{filename_name} {problems}",
+  "rpc.detailsViewing": "In {workspace_folder}:{filename_name} Lns:{total_lines}",
+  "rpc.lowerDetailsEditing": "Love is war.",
+  "rpc.lowerDetailsViewing": "**** is war.",
   "clangd.path": "/home/fer/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
