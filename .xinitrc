@@ -58,7 +58,7 @@ picom &
 feh --bg-scale --no-fehbg --randomize ~/Downloads/Wallpaper/*
 
 # brightness
-xrandr --output eDP-1 --brightness 0.6
+xrandr --output eDP-1 --brightness 0.7
 
 while true; do
 	xsetroot -name "$(date '+%b %d (%a) %H:%M%P')"
