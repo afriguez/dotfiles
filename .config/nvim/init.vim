@@ -17,6 +17,7 @@ Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'preservim/nerdtree'
@@ -53,8 +54,9 @@ nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 
-"" set filetypes as typescriptreact
-au BufRead,BufNewFile *jsx,*.tsx set filetype=typescriptreact
+"" set filetypes as typescriptreact and javascriptreact
+au BufRead,BufNewFile *.ts,*.tsx set filetype=typescriptreact
+au BufRead,BufNewFile *.js,*.jsx set filetype=javascriptreact
 
 hi tsxTagName ctermfg=51
 hi tsxComponentName ctermfg=155
