@@ -48,6 +48,7 @@ nmap <leader>gs :G<CR>
 
 nnoremap <leader>gc :GCheckout<CR>
 
+nnoremap go :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
 "" nnoremap gp :!npx prettier --write %:p<CR>
 
