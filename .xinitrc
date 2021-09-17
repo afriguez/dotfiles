@@ -61,7 +61,7 @@ feh --bg-scale --no-fehbg --randomize ~/Downloads/Wallpaper/*
 xrandr --output eDP-1 --brightness 0.7
 
 while true; do
-	xsetroot -name "$(date '+%b %d (%a) %H:%M%P')"
+	xsetroot -name "$(date '+%b %d (%a) %H:%M%P') $(cat /sys/class/power_supply/BAT0/capacity)%"
 	sleep 30s
 done &
 
