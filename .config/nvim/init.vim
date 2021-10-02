@@ -19,6 +19,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
