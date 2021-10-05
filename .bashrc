@@ -8,6 +8,8 @@
 alias ls='ls -la --color=auto'
 PS1='[\u@\h \W]\$ '
 
+export EDITOR="nvim"
+
 PF_ALIGN="10" PF_INFO="ascii title os kernel uptime pkgs" pfetch
 alias dot='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
