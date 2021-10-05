@@ -32,3 +32,8 @@ colors:
 window:
   padding:
     x: 2
+
+#font:
+  #normal:
+    #family: Noto Sans Mono
+    #style: Regular
