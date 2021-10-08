@@ -12,6 +12,7 @@ export EDITOR="nvim"
 
 PF_ALIGN="10" PF_INFO="ascii title os kernel uptime pkgs" pfetch
 alias dot='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias wper='feh --bg-scale --no-fehbg --randomize ~/Downloads/Wallpaper/*'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
