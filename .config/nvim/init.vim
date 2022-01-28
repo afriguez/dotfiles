@@ -5,7 +5,6 @@ set number
 set tabstop=4 softtabstop=4 shiftwidth=4
 
 call plug#begin()
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -23,13 +22,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
-
-Plug 'iamcco/markdown-preview.nvim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh'
-    \ }
-
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
@@ -43,20 +35,18 @@ nnoremap <C-T> :Files<cr>
 nnoremap <Leader>b :Buffers<cr>
 nnoremap <Leader>s :BLines<cr>
 
+nmap <leader>gs :G<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
-nmap <leader>gs :G<CR>
-
 nnoremap <leader>gc :GCheckout<CR>
+nnoremap <leader>gk :Git commit<CR>
 
 nnoremap go :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
-"" nnoremap gp :!npx prettier --write %:p<CR>
 
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 
-"" set filetypes as typescriptreact and javascriptreact
 au BufRead,BufNewFile *.ts,*.tsx set filetype=typescriptreact
 au BufRead,BufNewFile *.js,*.jsx set filetype=javascriptreact
 
