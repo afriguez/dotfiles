@@ -58,7 +58,7 @@ picom --no-fading-openclose &
 feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/nice.jpg
 
 # brightness
-xrandr --output eDP-1 --brightness 0.5
+xrandr --output eDP-1 --brightness 0.7
 
 while true; do
 	xsetroot -name "$(date '+%b %d (%a) %H:%M%P') $(cat /sys/class/power_supply/BAT0/capacity)%"

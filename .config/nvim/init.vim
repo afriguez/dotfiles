@@ -2,7 +2,7 @@ set nobackup
 set noswapfile
 set relativenumber
 set number
-set tabstop=4 softtabstop=4 shiftwidth=4
+set tabstop=4 softtabstop=2 shiftwidth=2
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -44,14 +44,16 @@ nnoremap <leader>gk :Git commit<CR>
 nnoremap go :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
 
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 
 au BufRead,BufNewFile *.ts,*.tsx set filetype=typescriptreact
 au BufRead,BufNewFile *.js,*.jsx set filetype=javascriptreact
 
-hi tsxTagName ctermfg=51
-hi tsxComponentName ctermfg=155
-hi tsxCloseComponentName ctermfg=155
-hi tsxCloseTag ctermfg=51
-hi tsxCloseTagName ctermfg=51
+hi Comment cterm=bold cterm=italic
+hi Special cterm=italic
+hi Type cterm=italic
