@@ -52,17 +52,35 @@ fi
 xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x312 --output HDMI-1 --mode 1920x1080 --pos 1366x0
 
 # compositor
-picom --no-fading-openclose &
+picom &
 
 # wallpaper
-feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/nice.jpg
+feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/kindred\ 2.jpg
 
 # brightness
 xrandr --output eDP-1 --brightness 0.7
 
+clock() {
+  printf "^c#21222C^ ^b#8BE9FD^  󱑆  "
+  printf "^c#21222C^^b#A4FFFF^ $(date '+%H:%M')  "
+}
+
+battery() {
+  capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
+  printf "^c#21222C^^b#F1FA8C^    "
+  printf "^c#21222C^^b#FFFFA5^ $capacity"
+}
+
+wlan() {
+  case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+	up) printf "^c#21222C^ ^b#50FA7B^  󰤨  ^d^%s" "^c#21222C^^b#69ff94^ Connected" ;;
+	down) printf "^c#21222C^ ^b#FF5555^  󰤭  ^d^%s" "^c#21222C^^b#ff6e6e^ Disconnected" ;;
+  esac
+}
+
 while true; do
-	xsetroot -name "$(date '+%b %d (%a) %H:%M%P') $(cat /sys/class/power_supply/BAT0/capacity)%"
-	sleep 30s
+  xsetroot -name "$(battery) $(wlan) $(clock) "
+  sleep 30s
 done &
 
 exec dwm
