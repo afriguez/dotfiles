@@ -22,6 +22,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
@@ -50,6 +51,7 @@ nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
+let g:airline_theme='violet'
 
 au BufRead,BufNewFile *.ts,*.tsx set filetype=typescriptreact
 au BufRead,BufNewFile *.js,*.jsx set filetype=javascriptreact
