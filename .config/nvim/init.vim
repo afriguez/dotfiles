@@ -3,7 +3,6 @@ set noswapfile
 set relativenumber
 set number
 set tabstop=4 softtabstop=2 shiftwidth=2
-
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -56,6 +55,7 @@ let g:airline_theme='violet'
 au BufRead,BufNewFile *.ts,*.tsx set filetype=typescriptreact
 au BufRead,BufNewFile *.js,*.jsx set filetype=javascriptreact
 
-hi Comment cterm=bold cterm=italic
+hi Comment cterm=italic
 hi Special cterm=italic
-hi Type cterm=italic
+hi Statement cterm=italic
+hi Type cterm=bold,italic
