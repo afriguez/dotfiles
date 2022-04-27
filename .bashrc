@@ -6,7 +6,11 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls -la --color=auto'
-PS1='[\u@\h \W]\$ '
+
+COLOR="\[$(tput setaf 213)\]"
+RESET="\[$(tput sgr0)\]"
+
+PS1="${COLOR}[\u@\h \W]\$${RESET} "
 
 export EDITOR="nvim"
 
