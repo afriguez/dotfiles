@@ -61,20 +61,20 @@ feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/kindred\ 2.jpg
 xrandr --output eDP-1 --brightness 0.7
 
 clock() {
-  printf "^c#21222C^ ^b#8BE9FD^  󱑆  "
+  printf "^c#21222C^ ^b#8BE9FD^  "
   printf "^c#21222C^^b#A4FFFF^ $(date '+%H:%M')  "
 }
 
 battery() {
   capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
-  printf "^c#21222C^^b#F1FA8C^    "
+  printf "^c#21222C^^b#F1FA8C^  "
   printf "^c#21222C^^b#FFFFA5^ $capacity"
 }
 
 wlan() {
   case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c#21222C^ ^b#50FA7B^  󰤨  ^d^%s" "^c#21222C^^b#69ff94^ Connected" ;;
-	down) printf "^c#21222C^ ^b#FF5555^  󰤭  ^d^%s" "^c#21222C^^b#ff6e6e^ Disconnected" ;;
+	up) printf "^c#21222C^ ^b#50FA7B^ 直 ^d^%s" "^c#21222C^^b#69ff94^ Connected" ;;
+	down) printf "^c#21222C^ ^b#FF5555^ 睊 ^d^%s" "^c#21222C^^b#ff6e6e^ Disconnected" ;;
   esac
 }
 
