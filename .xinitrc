@@ -67,7 +67,7 @@ clock() {
 
 battery() {
   capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
-  printf "^c#21222C^^b#F1FA8C^  "
+  printf "^c#21222C^^b#F1FA8C^  "
   printf "^c#21222C^^b#FFFFA5^ $capacity"
 }
 

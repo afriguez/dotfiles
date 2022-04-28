@@ -5,7 +5,7 @@
 ## Stuff
 |||
 | -----------		| ----------- |
-| Fonts				| [JetBrainsMono Nerd Font](https://www.programmingfonts.org/#jetbrainsmono) |
+| Fonts				| [JetBrainsMono Nerd Font](https://www.programmingfonts.org/#jetbrainsmono) [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP) |
 | Editor			| [nvim](https://neovim.io/) |
 | File Manager		| [nnn](https://github.com/jarun/nnn) |
 | Terminal Emulator	| [kitty](https://sw.kovidgoyal.net/kitty/) |
