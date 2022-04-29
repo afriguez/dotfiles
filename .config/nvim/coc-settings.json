@@ -1,9 +1,9 @@
 {
-  "rpc.workspaceElapsedTime": true,
-  "rpc.detailsEditing": "{workspace_folder}:{file_name} {problems}",
-  "rpc.detailsViewing": "In {workspace_folder}:{file_name} Lns:{total_lines}",
-  "rpc.lowerDetailsEditing": "Love is war.",
-  "rpc.lowerDetailsViewing": "**** is war.",
+  "rpc.detailsEditing": "In {workspace_folder} - Love is war.",
+  "rpc.detailsViewing": "In {workspace_folder} - **** is war.",
+  "rpc.lowerDetailsEditing": "Editing: {file_name}",
+  "rpc.lowerDetailsViewing": "Viewing: {file_name}",
+  "rpc.lowerDetailsNotFound": "No workspace",
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
   "languageserver": {
 	  "golang": {
