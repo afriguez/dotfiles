@@ -59,3 +59,4 @@ hi Comment cterm=italic
 hi Special cterm=italic
 hi Statement cterm=italic
 hi Type cterm=bold,italic
+hi Identifier cterm=italic
