@@ -14,9 +14,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'leafgarland/typescript-vim'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'peitalin/vim-jsx-typescript'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'preservim/nerdtree'
@@ -52,8 +53,7 @@ let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 let g:airline_theme='violet'
 
-au BufRead,BufNewFile *.ts,*.tsx set filetype=typescriptreact
-au BufRead,BufNewFile *.js,*.jsx set filetype=javascriptreact
+let g:vim_jsx_pretty_colorful_config = 1
 
 hi Comment cterm=italic
 hi Special cterm=italic
