@@ -1,17 +1,19 @@
 {
-  "rpc.detailsEditing": "In {workspace_folder} - Love is war.",
-  "rpc.detailsViewing": "In {workspace_folder} - **** is war.",
-  "rpc.lowerDetailsEditing": "Editing: {file_name}",
-  "rpc.lowerDetailsViewing": "Viewing: {file_name}",
+  "rpc.detailsEditing": "Editing: {file_name}:{current_line}:{current_column}",
+  "rpc.detailsViewing": "Viewing: {file_name}",
+  "rpc.lowerDetailsEditing": "Workspace: {workspace_folder}",
+  "rpc.lowerDetailsViewing": "Workspace: {workspace_folder}",
   "rpc.lowerDetailsNotFound": "No workspace",
+  "codeLens.enable": true,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "languageserver": {
-	  "golang": {
-		  "command": "gopls",
-		  "rootPatterns": ["go.mod", ".vim/", ".git", ".hg/"],
-		  "filetypes": ["go"],
-		  "initializationOptions": {
-			  "usePlaceholders": true
-		  }
-	  }
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
   }
 }
