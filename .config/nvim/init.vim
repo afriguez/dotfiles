@@ -10,6 +10,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
+
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
@@ -27,6 +30,7 @@ call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+let g:mix_format_on_save = 1
 
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
