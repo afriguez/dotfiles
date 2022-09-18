@@ -1,8 +1,8 @@
 {
   "rpc.detailsEditing": "Editing: {file_name}:{current_line}:{current_column}",
   "rpc.detailsViewing": "Viewing: {file_name}",
-  "rpc.lowerDetailsEditing": "Workspace: {workspace_folder}",
-  "rpc.lowerDetailsViewing": "Workspace: {workspace_folder}",
+  "rpc.lowerDetailsEditing": "📂 {workspace_folder}",
+  "rpc.lowerDetailsViewing": "📁 {workspace_folder}",
   "rpc.lowerDetailsNotFound": "No workspace",
   "codeLens.enable": true,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
