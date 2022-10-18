@@ -2,7 +2,8 @@ set nobackup
 set noswapfile
 set relativenumber
 set number
-set tabstop=4 softtabstop=2 shiftwidth=2
+set mouse=
+set tabstop=4 softtabstop=4 shiftwidth=4
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
