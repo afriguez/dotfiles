@@ -43,8 +43,7 @@ let g:coc_global_extensions = [
 	  \ 'coc-python',
 	  \ 'coc-go',
 	  \ 'coc-elixir',
-	  \ 'coc-css'
-]
+	  \ 'coc-css' ]
 
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-T> :Files<cr>
