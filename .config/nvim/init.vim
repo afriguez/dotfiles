@@ -7,10 +7,6 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim'
-
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 
