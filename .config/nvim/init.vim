@@ -4,8 +4,8 @@ set relativenumber
 set number
 set mouse=
 set tabstop=4 softtabstop=4 shiftwidth=4
-call plug#begin()
 
+call plug#begin()
 " misc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
@@ -21,13 +21,12 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " interface
-Plug 'preservim/nerdtree'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
 let g:mix_format_on_save = 1
 
 nmap <leader>gd <Plug>(coc-definition)
@@ -46,10 +45,6 @@ nnoremap <leader>gk :Git commit<CR>
 
 nnoremap go :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
-
-nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
 
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
