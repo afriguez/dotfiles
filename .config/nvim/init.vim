@@ -33,6 +33,19 @@ let g:mix_format_on_save = 1
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
 
+let g:coc_global_extensions = [
+	  \ 'coc-prettier',
+	  \ 'coc-html',
+	  \ 'coc-discord-rpc',
+	  \ 'coc-tsserver',
+	  \ 'coc-sql',
+	  \ 'coc-sh',
+	  \ 'coc-python',
+	  \ 'coc-go',
+	  \ 'coc-elixir',
+	  \ 'coc-css'
+]
+
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-T> :Files<cr>
 nnoremap <Leader>b :Buffers<cr>
