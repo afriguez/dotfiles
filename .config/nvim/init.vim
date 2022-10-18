@@ -3,7 +3,7 @@ set noswapfile
 set relativenumber
 set number
 set mouse=
-set tabstop=4 softtabstop=4 shiftwidth=4
+set tabstop=4 softtabstop=4 shiftwidth=2
 
 call plug#begin()
 " misc
@@ -27,6 +27,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+map <C-n> :NvimTreeToggle<CR>
 let g:mix_format_on_save = 1
 
 nmap <leader>gd <Plug>(coc-definition)
@@ -57,3 +58,29 @@ hi Special cterm=italic
 hi Statement cterm=italic
 hi Type cterm=bold,italic
 hi Identifier cterm=italic
+
+lua << EOF
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("nvim-tree").setup({
+  sort_by = "extension",
+  git = {
+	enable = true,
+	ignore = false,
+  },
+  view = {
+    adaptive_size = true,
+	number = true,
+	relativenumber = true,
+  },
+  renderer = {
+    group_empty = true,
+	icons = {
+	  show = {
+		git = true,
+	  },
+	},
+  },
+})
+EOF
