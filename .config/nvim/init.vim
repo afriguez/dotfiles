@@ -5,21 +5,22 @@ set number
 set mouse=
 set tabstop=4 softtabstop=4 shiftwidth=4
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" misc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
+
+" syntax hi, filetype detection, format
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
-
-Plug 'tpope/vim-fugitive'
-Plug 'mattn/emmet-vim'
-Plug 'jiangmiao/auto-pairs'
-
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
-
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" interface
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
