@@ -50,7 +50,9 @@ let g:coc_global_extensions = [
 	  \ 'coc-python',
 	  \ 'coc-go',
 	  \ 'coc-elixir',
-	  \ 'coc-css' ]
+	  \ 'coc-css',
+	  \ 'coc-webview',
+	  \ 'coc-markdown-preview-enhanced' ]
 
 " fugitive
 nnoremap <leader>gs :Git<CR>
