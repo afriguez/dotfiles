@@ -55,7 +55,7 @@ xrandr --output eDP-1 --primary --mode 1366x768 --pos 1920x312 --output HDMI-1 -
 picom &
 
 # wallpaper
-feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/kindred\ 2.jpg
+feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/275682.jpg
 
 # brightness
 xrandr --output eDP-1 --brightness 0.7
