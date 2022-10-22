@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S --needed xorg xorg-xinit nnn chromium kitty git base-devel feh picom pulseaudio pavucontrol flameshot noisetorch discord
+sudo pacman -S --needed xorg xorg-xinit nnn chromium kitty git base-devel feh picom pulseaudio pavucontrol flameshot noisetorch discord noto-fonts-emoji openssh
 
 # AUR
 git clone https://aur.archlinux.org/yay-git.git ~/yay
