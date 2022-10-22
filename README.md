@@ -1,6 +1,4 @@
 # Dotfiles
-![screenshot](./Downloads/sshot.png)
-
 
 ## Stuff
 |||
@@ -21,11 +19,13 @@
 - coc-discord-rpc
 - coc-tsserver
 - coc-sql
+- coc-sh
 - coc-python
-- coc-jedi
-- coc-java
 - coc-go
+- coc-elixir
 - coc-css
+- coc-webview
+- coc-markdown-preview-enhanced
 
 # To Do
 - [ ] Install nnn plugins
@@ -34,5 +34,3 @@
 ## Maybe
 - [ ] Remove title
   - with [dwm/notitle](https://dwm.suckless.org/patches/notitle/)
-- [ ] Install zsh
-  - & use [Oh My Zsh](https://ohmyz.sh/)
