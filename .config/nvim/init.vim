@@ -70,6 +70,7 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " harpoon
 nnoremap <leader>hf <cmd>lua require('harpoon.mark').add_file()<cr>
 nnoremap <leader>hl <cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>
+nnoremap <leader>ht <cmd>lua require("harpoon.term").gotoTerminal(1)<cr>
 
 nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
 
