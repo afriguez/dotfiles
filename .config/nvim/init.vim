@@ -73,6 +73,13 @@ nnoremap <leader>hl <cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>
 
 nnoremap gp :call CocAction('runCommand', 'prettier.formatFile')<CR>
 
+" completion
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <expr> <S-cr> coc#pum#visible() ? coc#pum#confirm() : "\<S-CR>"
+
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 let g:airline_theme='violet'
