@@ -58,7 +58,7 @@ picom &
 feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/275682.jpg
 
 # brightness
-xrandr --output eDP-1 --brightness 0.7
+xrandr --output eDP-1 --brightness 0.5
 
 clock() {
   printf "^c#21222C^ ^b#8BE9FD^  "
@@ -73,8 +73,8 @@ battery() {
 
 wlan() {
   case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c#21222C^ ^b#50FA7B^ 直 ^d^%s" "^c#21222C^^b#69ff94^ Connected" ;;
-	down) printf "^c#21222C^ ^b#FF5555^ 睊 ^d^%s" "^c#21222C^^b#ff6e6e^ Disconnected" ;;
+	up) printf "^c#21222C^ ^b#50FA7B^ 直 ^d^%s" "^c#21222C^^b#69ff94^ Up" ;;
+	down) printf "^c#21222C^ ^b#FF5555^ 睊 ^d^%s" "^c#21222C^^b#ff6e6e^ Down" ;;
   esac
 }
 
