@@ -58,23 +58,23 @@ picom &
 feh --bg-scale --no-fehbg ~/Downloads/Wallpaper/275682.jpg
 
 # brightness
-xrandr --output eDP-1 --brightness 0.5
+xrandr --output eDP-1 --brightness 0.7
 
 clock() {
-  printf "^c#21222C^ ^b#8BE9FD^  "
-  printf "^c#21222C^^b#A4FFFF^ $(date '+%H:%M')  "
+  printf "^c#A4FFFF^  "
+  printf "^c#A4FFFF^$(date '+%H:%M')  ^c#FF66D8^ $(date '+%d/%m/%y')  "
 }
 
 battery() {
   capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
-  printf "^c#21222C^^b#F1FA8C^  "
-  printf "^c#21222C^^b#FFFFA5^ $capacity"
+  printf "^c#F1FA8C^  "
+  printf "^c#FFFFA5^$capacity%%"
 }
 
 wlan() {
   case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c#21222C^ ^b#50FA7B^ 直 ^d^%s" "^c#21222C^^b#69ff94^ Up" ;;
-	down) printf "^c#21222C^ ^b#FF5555^ 睊 ^d^%s" "^c#21222C^^b#ff6e6e^ Down" ;;
+	up) printf "^c#69ff94^ 直%s" " Up" ;;
+	down) printf "^c#ff6e6e^ 睊%s" " Down" ;;
   esac
 }
 
