@@ -13,24 +13,10 @@
 | Images			| [feh](https://feh.finalrewind.org/)       |
 | Audio				| [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/) - [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) -  spotify|
 
-### Coc-Extensions
-- coc-prettier
-- coc-html
-- coc-discord-rpc
-- coc-tsserver
-- coc-sql
-- coc-sh
-- coc-python
-- coc-go
-- coc-elixir
-- coc-css
-- coc-webview
-- coc-markdown-preview-enhanced
-
 # To Do
 - [ ] Install nnn plugins
 - [ ] Add mimeapps.list
 
 ## Maybe
-- [ ] Remove title
+- [x] Remove title
   - with [dwm/notitle](https://dwm.suckless.org/patches/notitle/)
