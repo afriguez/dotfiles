@@ -95,6 +95,8 @@ inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <S-cr> coc#pum#visible() ? coc#pum#confirm() : "\<S-CR>"
 
+nnoremap <leader>hw :HopWord<CR>
+
 let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 let g:airline_theme='violet'
