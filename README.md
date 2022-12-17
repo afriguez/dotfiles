@@ -1,4 +1,5 @@
 # Dotfiles
+![screenshot](./Downloads/sshot.png)
 
 ## Stuff
 |||
@@ -12,10 +13,7 @@
 | Window Manager	| [dwm](https://dwm.suckless.org/) |
 | Images			| [feh](https://feh.finalrewind.org/)       |
 | Audio				| [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/) - [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) -  spotify|
-
-# To Do
-- [ ] Install nnn plugins
-- [ ] Add mimeapps.list
+| Notifications		| dunst |
 
 ## Maybe
 - [x] Remove title
