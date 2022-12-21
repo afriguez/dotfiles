@@ -1,5 +1,9 @@
 # Dotfiles
-![screenshot](./Downloads/sshot.png)
+|~.~|~.~|
+| ------------------------------------ | ------------------------------------ |
+| ![normal-setup](./Downloads/sshot.png) | ![stuff](./Downloads/sshot-terminal-nnn.png) |
+| ![spotify](./Downloads/sshot-spotify.png) | ![stuff](./Downloads/sshot-browser.png) |
+
 
 ## Stuff
 |||
