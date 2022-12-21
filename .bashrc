@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls -la --color=auto'
+alias ls='ls -l --color=auto'
+alias nnn='nnn -d -e -H -r'
 
 COLOR="\[$(tput setab 98)\]"
 COLOR_FG="\[$(tput setaf 98)\]"
