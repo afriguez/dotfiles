@@ -35,7 +35,7 @@ cd() {
 
     if [ $? -eq 0 ]; then
         if [ "$LAST_REPO" != $(basename $(git rev-parse --show-toplevel)) ]; then
-		onefetch -d title dependencies authors contributors repo license -i $img_path
+		onefetch -d dependencies authors contributors license -i $img_path
         LAST_REPO=$(basename $(git rev-parse --show-toplevel))
         fi
     fi
