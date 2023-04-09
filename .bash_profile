@@ -12,3 +12,4 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+export PATH=$PATH:/home/fer/.spicetify

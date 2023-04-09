@@ -40,3 +40,4 @@ cd() {
         fi
     fi
 }
+export PATH=$PATH:/home/fer/.spicetify

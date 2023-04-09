@@ -55,10 +55,11 @@ xrandr --output eDP --primary --mode 1366x768 --pos 0x0 --output HDMI-A-0 --mode
 picom &
 
 # wallpaper
-feh --bg-fill --no-fehbg ~/Downloads/Wallpaper/x5YwbDH.jpg
+#feh --bg-fill --no-fehbg ~/Downloads/Wallpaper/x5YwbDH.jpg
+shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
 
 # brightness
-xrandr --output eDP --brightness 0.4
+xrandr --output eDP --brightness 0.3
 
 clock() {
   printf "^c#A4FFFF^  "
