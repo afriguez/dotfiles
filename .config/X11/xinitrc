@@ -49,7 +49,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # monitors
-xrandr --output eDP --primary --mode 1366x768 --pos 0x0 --output HDMI-A-0 --mode 1920x1080 --pos 1366x0
+xrandr \
+	--output eDP \
+	--primary \
+	--set TearFree on \
+	--mode 1366x768 \
+	--pos 0x0 \
+	--brightness 0.4 \
+	--output HDMI-A-0 \
+	--set TearFree on \
+	--mode 1920x1080 \
+	--pos 1366x0
 
 # compositor
 picom &
@@ -58,10 +68,6 @@ picom &
 #feh --bg-fill --no-fehbg ~/Downloads/Wallpaper/x5YwbDH.jpg
 shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
 
-# brightness
-xrandr --output eDP --brightness 0.3
-
-xrandr --output HDMI-A-0 --set TearFree on
 
 clock() {
   printf "^c#A4FFFF^  "
