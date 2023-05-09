@@ -70,20 +70,20 @@ shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
 
 
 clock() {
-  printf "^c#A4FFFF^  "
-  printf "^c#A4FFFF^$(date '+%H:%M')  ^c#FF66D8^ $(date '+%d/%m/%y')"
+  printf "^c#A4FFFF^󱑍 "
+  printf "^c#A4FFFF^$(date '+%H:%M') ^c#FF66D8^  $(date '+%d/%m/%y')"
 }
 
 battery() {
   capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
   printf "^c#F1FA8C^  "
-  printf "^c#FFFFA5^$capacity%%"
+  printf "^c#FFFFA5^$capacity%% "
 }
 
 wlan() {
   case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c#69ff94^1" ;;
-	down) printf "^c#ff6e6e^0" ;;
+	up) printf "^c#69ff94^ 1" ;;
+	down) printf "^c#ff6e6e^ 0" ;;
   esac
 }
 
