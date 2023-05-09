@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-feh --bg-fill --no-fehbg --randomize ~/Downloads/Wallpaper/*
+shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
