@@ -7,8 +7,8 @@
 
 alias ls='ls -l --color=auto'
 alias nnn='nnn -d -e -H -r'
-alias cdw='cd $HOME/workspace/ && cd'
-alias cdww='cd $HOME/workspace/ && nnn'
+alias cat='bat --theme Dracula'
+alias cdw='cd $HOME/workspace/ && nnn'
 
 COLOR="\[$(tput setab 98)\]"
 COLOR_FG="\[$(tput setaf 98)\]"
