@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-cd $(find * -type d | fzf) && zellij
+cd $(find ~/ -type d | fzf) && zellij

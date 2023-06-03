@@ -9,6 +9,7 @@ alias ls='ls -l --color=auto'
 alias nnn='nnn -d -e -H -r'
 alias cat='bat --theme Dracula'
 alias cdw='cd $HOME/workspace/ && nnn'
+alias cdf='cd $(find ~/ -type d | fzf)'
 
 COLOR="\[$(tput setab 98)\]"
 COLOR_FG="\[$(tput setaf 98)\]"
