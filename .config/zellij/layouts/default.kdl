@@ -1,0 +1,15 @@
+layout {
+	default_tab_template {
+		children
+		pane size=1 {
+			plugin location="zellij:status-bar"
+		}
+	}
+	tab_template name="editor_tab" {
+		pane edit="."
+	}
+	editor_tab
+	tab focus=true {
+		pane
+	}
+}
