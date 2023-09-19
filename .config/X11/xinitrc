@@ -51,11 +51,11 @@ fi
 # monitors
 xrandr \
 	--output eDP \
+	--brightness 0.6 \
 	--primary \
 	--set TearFree on \
 	--mode 1366x768 \
 	--pos 0x0 \
-	--brightness 0.4 \
 	--output HDMI-A-0 \
 	--set TearFree on \
 	--mode 1920x1080 \
