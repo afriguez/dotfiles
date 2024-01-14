@@ -36,9 +36,12 @@ cd() {
 
     if [ $? -eq 0 ]; then
         if [ "$LAST_REPO" != $(basename $(git rev-parse --show-toplevel)) ]; then
-		onefetch -d dependencies authors contributors license -i $img_path
+		onefetch -d dependencies authors contributors license -i $img_path --image-protocol kitty
         LAST_REPO=$(basename $(git rev-parse --show-toplevel))
         fi
     fi
 }
 export PATH=$PATH:/home/fer/.spicetify
+
+# Created by `pipx` on 2024-01-10 20:44:24
+export PATH="$PATH:/home/fer/.local/bin"
