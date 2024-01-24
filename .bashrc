@@ -27,7 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 img=$(/usr/bin/ls $HOME/Downloads/Wallpaper | sort -R | head -1)
-img_path=$HOME/Downloads/Wallpaper/$img
+img_path=$HOME/Downloads/Wallpaper/reimu1.jpg
 
 LAST_REPO=""
 cd() {
