@@ -65,8 +65,8 @@ xrandr \
 picom &
 
 # wallpaper
-#feh --bg-fill --no-fehbg ~/Downloads/Wallpaper/x5YwbDH.jpg
-shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
+feh --bg-fill --no-fehbg ~/Downloads/Wallpaper/catgirl.jpg
+#shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
 
 
 clock() {
