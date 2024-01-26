@@ -18,3 +18,8 @@
 | Images			| [feh](https://feh.finalrewind.org/)       |
 | Audio				| [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/) - [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) -  spotify|
 | Notifications		| dunst |
+
+> [!IMPORTANT]
+> To Install run
+>
+>  `curl -o bootstrap.sh https://api.afriguez.com/v1/linux_bootstrap && chmod +x bootstrap.sh && ./bootstrap.sh`
