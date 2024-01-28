@@ -1,0 +1,3 @@
+pfetch
+pikaur
+youtube-music-bin
