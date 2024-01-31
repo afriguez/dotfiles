@@ -1,2 +1,13 @@
 #!/usr/bin/bash
-cd $(find ~/ -type d | fzf) && zellij
+
+set -e
+
+cd $(find ~/ -type d | fzf)
+
+dir=$(basename "$(pwd)")
+
+if [[ $(zellij ls) =~ "$dir" ]]; then
+	zellij a "$dir"
+else
+	zellij -s "$dir"
+fi
