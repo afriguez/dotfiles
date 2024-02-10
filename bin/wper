@@ -1,2 +1,41 @@
 #!/usr/bin/bash
-shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
+
+set -e
+
+name=$(basename $0)
+usage() {
+	echo -e "Usage:\t"$name" [option]" >&2
+	echo ""
+	echo -e "\t"$name" -h -> this message"
+	echo -e "\t"$name" -r -> random image"
+	echo -e "\t"$name" -d -> day image"
+	echo -e "\t"$name" -n -> night image"
+}
+
+while getopts ":rdn" opt; do
+	case ${opt} in
+		r)
+			prefix="*"
+			;;
+		d)
+			prefix="d_*"
+			;;
+		n)
+			prefix="n_*"
+			;;
+		\?)
+			usage
+			exit 1
+			;;
+	esac
+done
+shift $((OPTIND -1))
+
+hour=$(date +%H)
+
+if ! declare -p prefix &>/dev/null; then
+	[ "$hour" -lt 18 ] && [ "$hour" -gt 8 ] && prefix="d_*" || prefix="n_*"
+fi
+
+
+feh --bg-fill --no-fehbg "$(shuf -e -n1 ~/Downloads/Wallpaper/$prefix)"

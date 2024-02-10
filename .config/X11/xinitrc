@@ -64,11 +64,6 @@ xrandr \
 # compositor
 picom &
 
-# wallpaper
-feh --bg-fill --no-fehbg ~/Downloads/Wallpaper/catgirl.jpg
-#shuf -e -n1 ~/Downloads/Wallpaper/* | xargs feh --bg-fill --no-fehbg
-
-
 clock() {
   printf "^c#A4FFFF^󱑍 "
   printf "^c#A4FFFF^$(date '+%H:%M') ^c#FF66D8^  $(date '+%d/%m/%y')"
@@ -94,9 +89,25 @@ eth() {
 	esac
 }
 
+# wallpaper
+while true; do
+	local morning=8
+	local night=18
+	local hour=$(date +%H)
+
+	if [ "$hour" -lt "$night" ] && [ "$hour" -gt "$morning" ]; then
+		hours_till_change=$((night - hour))
+	else
+		hours_till_change=$((morning - hour))
+	fi
+
+	wper
+	sleep "$((hours_till_change * 3600))"
+done
+
 while true; do
 	xsetroot -name "$(battery) $(clock) $(wlan)|$(eth)   "
-  sleep 30s
+	sleep 30s
 done &
 
 nm-applet &
