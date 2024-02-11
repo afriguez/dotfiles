@@ -99,6 +99,7 @@ while true; do
 		hours_till_change=$((night - hour))
 	else
 		hours_till_change=$((morning - hour))
+		hours_till_change=$((hours_till_change < 0 ? -hours_till_change : hours_till_change))
 	fi
 
 	wper
